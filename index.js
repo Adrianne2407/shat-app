@@ -6,6 +6,12 @@ const { Server } = require("socket.io");
 app.use(cors());
 const mysql = require("mysql");
 
+app.use(express.json());
+app.get("/", (req, res) => {
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.send("API is running..!");
+});
+
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
