@@ -16,7 +16,7 @@ const db = mysql.createConnection({
 });
 
 app.get("/". (req, res) => {
-  res.setHeader("Access-Control-Allow-Credentials",
+  res.setHeader("Access-Control-Allow-Credentials", "true");
   res.send("API is running..");
                 });
 
